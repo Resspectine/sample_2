@@ -1,0 +1,18 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="164.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="114.0" layoutY="40.0" mnemonicParsing="false" text="Отгадывать слово" onAction="#otgadivat" />
+      <Button layoutX="114.0" layoutY="91.0" mnemonicParsing="false" text="Загадывать слово" onAction="#zagadivat"/>
+   </children>
+</Pane>
+</GridPane>
