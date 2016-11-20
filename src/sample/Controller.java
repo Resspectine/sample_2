@@ -39,4 +39,16 @@ public class Controller {
         } else {
         }
     }
+   /* scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+        @Override
+        public void handle(KeyEvent event) {
+            switch (event.getCode()) {
+                case UP: goNorth = true; break;
+                case DOWN: goSouth = true; break;
+                case LEFT: goWest = true; break;
+                case RIGHT: goEast = true; break;
+                case SHIFT: running = true; break;
+            }
+        }
+    });*/
 }
