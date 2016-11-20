@@ -9,8 +9,8 @@
 <GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="sample.Controller">
     <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="button" layoutX="150.0" layoutY="68.0" mnemonicParsing="false" onAction="#otgadivat" prefHeight="150.0" prefWidth="351.0" text="Отгадывать слово" />
-      <Button layoutX="150.0" layoutY="277.0" mnemonicParsing="false" onAction="#zagadivat" prefHeight="150.0" prefWidth="351.0" text="Загадывать слово" />
+      <Button fx:id="button" layoutX="150.0" layoutY="68.0" mnemonicParsing="false" onAction="#guesse" prefHeight="150.0" prefWidth="351.0" text="Отгадывать слово" />
+      <Button layoutX="150.0" layoutY="277.0" mnemonicParsing="false" onAction="#riddle" prefHeight="150.0" prefWidth="351.0" text="Загадывать слово" />
    </children>
 </Pane>
    <columnConstraints>

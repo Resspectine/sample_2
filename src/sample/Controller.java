@@ -18,22 +18,22 @@ public class Controller {
     public TextField chatText;
     public String message = "";
 
-    public void zagadivat(ActionEvent actionEvent) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("simple1.fxml"));
+    public void guesse(ActionEvent actionEvent) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("riddler.fxml"));
         button.getScene().setRoot(root);
     }
 
-    public void otgadivat(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+    public void riddle(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("guesser.fxml"));
         button.getScene().setRoot(root);
     }
 
     public void back(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("sample1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
         buttonBack.getScene().setRoot(root);
     }
 
-    public void sendText(ActionEvent actionEvent) {
+    public void sendTextInChat(ActionEvent actionEvent) {
         if (!chatText.getText().equals("")) {
             message += chatText.getText() + "\n";
             chat.setText(message);
