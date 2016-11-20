@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
 
@@ -36,19 +38,16 @@ public class Controller {
             message += chatText.getText() + "\n";
             chat.setText(message);
             chatText.setText("");
-        } else {
         }
     }
-   /* scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-        @Override
-        public void handle(KeyEvent event) {
-            switch (event.getCode()) {
-                case UP: goNorth = true; break;
-                case DOWN: goSouth = true; break;
-                case LEFT: goWest = true; break;
-                case RIGHT: goEast = true; break;
-                case SHIFT: running = true; break;
+    public void handleEnterPressed(KeyEvent keyEvent) {
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (!chatText.getText().equals("")) {
+                message += chatText.getText() + "\n";
+                chat.setText(message);
+                chatText.setText("");
             }
         }
-    });*/
+    }
+
 }
