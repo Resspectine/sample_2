@@ -8,25 +8,21 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
         <children>
-            <TextArea editable="false" layoutX="21.0" layoutY="79.0" prefHeight="277.0" prefWidth="274.0" promptText="Текст будет виден здесь">
-                <font>
-                    <Font name="System Italic" size="12.0" />
-                </font></TextArea>
+            <TextArea fx:id="chat" editable="false" layoutX="21.0" layoutY="79.0" prefHeight="277.0" prefWidth="274.0" promptText="Текст будет виден здесь" wrapText="true" />
             <Label layoutX="401.0" layoutY="79.0" prefHeight="25.0" prefWidth="177.0" text="Здесь будет загаданное слово" />
-            <TextField layoutX="21.0" layoutY="356.0" prefHeight="25.0" prefWidth="200.0" promptText="Введите сообщение " />
-            <Button layoutX="221.0" layoutY="356.0" mnemonicParsing="false" text="Отправить" />
+            <TextField fx:id="chatText" layoutX="21.0" layoutY="356.0"  prefHeight="25.0" prefWidth="200.0" promptText="Введите сообщение" />
+            <Button layoutX="221.0" layoutY="356.0" mnemonicParsing="false" onAction="#sendText" text="Отправить" />
             <TextField layoutX="401.0" layoutY="251.0" prefHeight="25.0" prefWidth="167.0" promptText="Предположение" />
             <Button layoutX="401.0" layoutY="276.0" mnemonicParsing="false" text="Отправить предположение" />
             <Label alignment="CENTER" layoutX="401.0" layoutY="208.0" prefHeight="17.0" prefWidth="167.0" text="Придуманное слово" />
             <Button layoutX="21.0" layoutY="381.0" mnemonicParsing="false" text="Есть контакт!" textOverrun="CLIP" />
             <TextField layoutX="401.0" layoutY="126.0" prefHeight="25.0" prefWidth="167.0" promptText="Придумайте слово" />
             <Button layoutX="401.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Отправить слово" />
-         <Button layoutX="497.0" layoutY="381.0" mnemonicParsing="false" text="Назад" onAction="#back" fx:id="buttonBack"/>
+         <Button fx:id="buttonBack" layoutX="497.0" layoutY="381.0" mnemonicParsing="false" onAction="#back" text="Назад" />
         </children>
     </Pane>
    <columnConstraints>
