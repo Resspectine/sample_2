@@ -3,9 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
@@ -17,6 +15,7 @@ public class Controller {
     public TextArea chat;
     public TextField chatText;
     public String message = "";
+    public Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     public void guesse(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("riddler.fxml"));
@@ -40,6 +39,7 @@ public class Controller {
             chatText.setText("");
         }
     }
+
     public void handleEnterPressed(KeyEvent keyEvent) {
         if (keyEvent.getCode() == KeyCode.ENTER) {
             if (!chatText.getText().equals("")) {
@@ -50,4 +50,11 @@ public class Controller {
         }
     }
 
+    public void openDialogPane(ActionEvent actionEvent) {
+        alert.setTitle("Подсказочка");
+        alert.setHeaderText("Это ваш IP адресс");
+        alert.setContentText("ЗДЕСЬIPАДРЕСС");
+
+        alert.showAndWait();
+    }
 }

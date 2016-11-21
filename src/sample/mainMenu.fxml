@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="button" layoutX="150.0" layoutY="68.0" mnemonicParsing="false" onAction="#guesse" prefHeight="150.0" prefWidth="351.0" text="Отгадывать слово" />
-      <Button layoutX="150.0" layoutY="277.0" mnemonicParsing="false" onAction="#riddle" prefHeight="150.0" prefWidth="351.0" text="Загадывать слово" />
+      <Button fx:id="button" layoutX="45.0" layoutY="62.0" mnemonicParsing="false" onAction="#guesse" prefHeight="150.0" prefWidth="210.0" text="Отгадывать слово" />
+      <Button layoutX="395.0" layoutY="62.0" mnemonicParsing="false" onAction="#riddle" prefHeight="150.0" prefWidth="210.0" text="Загадывать слово" />
+         <Button layoutX="625.0" mnemonicParsing="false" onAction="#openDialogPane" prefHeight="25.0" prefWidth="25.0" />
+         <ImageView disable="true" fitHeight="25.0" fitWidth="25.0" focusTraversable="true" layoutX="625.0" pickOnBounds="true" smooth="false">
+            <image>
+               <Image url="@5782871912bc2155d5dfb9f5.png" />
+            </image>
+         </ImageView>
+         <Button layoutX="220.0" layoutY="317.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" text="Создать сервер" />
+         <Button layoutX="220.0" layoutY="399.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" text="Подключиться к серверу" />
+         <TextField layoutX="220.0" layoutY="374.0" prefHeight="25.0" prefWidth="210.0" />
+         <Label layoutX="220.0" layoutY="357.0" prefHeight="17.0" prefWidth="150.0" text="Введите IP адресс сервера" />
    </children>
 </Pane>
    <columnConstraints>
