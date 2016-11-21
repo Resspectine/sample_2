@@ -1,22 +1,27 @@
 package sample;
 
+import chat.*;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
 
 public class Controller {
+    @FXML
     public Button button;
+    @FXML
     public Button buttonBack;
-    public TextArea chat;
-    public TextField chatText;
-    public String message = "";
+    @FXML
+    private TextArea chat;
+    @FXML
+    private TextField chatText;
+    @FXML
+    private Chat chatBox;
 
     public void guesse(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("riddler.fxml"));
@@ -31,23 +36,6 @@ public class Controller {
     public void back(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
         buttonBack.getScene().setRoot(root);
-    }
-
-    public void sendTextInChat(ActionEvent actionEvent) {
-        if (!chatText.getText().equals("")) {
-            message += chatText.getText() + "\n";
-            chat.setText(message);
-            chatText.setText("");
-        }
-    }
-    public void handleEnterPressed(KeyEvent keyEvent) {
-        if (keyEvent.getCode() == KeyCode.ENTER) {
-            if (!chatText.getText().equals("")) {
-                message += chatText.getText() + "\n";
-                chat.setText(message);
-                chatText.setText("");
-            }
-        }
     }
 
 }
