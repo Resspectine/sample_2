@@ -11,18 +11,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <?import chat.Chat?>
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.60"
-          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0"
-          prefWidth="607.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
         <children>
-            <Button fx:id="buttonBack" layoutX="497.0" layoutY="381.0" mnemonicParsing="false" onAction="#back"
-                    text="Назад"/>
+            <Button fx:id="buttonBack" layoutX="497.0" layoutY="381.0" mnemonicParsing="false" onAction="#back" text="Назад"/>
             <TextField layoutX="401.0" layoutY="204.0" prefHeight="25.0" prefWidth="167.0" promptText="Предположение"/>
-            <Button layoutX="401.0" layoutY="229.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0"
-                    text="Сделать предположение"/>
-            <Button layoutX="401.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0"
-                    text="Есть контакт"/>
+            <Button layoutX="401.0" layoutY="229.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Сделать предположение"/>
+            <Button layoutX="401.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Есть контакт"/>
             <Chat fx:id="chatBox" layoutX="22.0" layoutY="30.0" prefHeight="321.0" prefWidth="248.0"/>
         </children>
     </Pane>

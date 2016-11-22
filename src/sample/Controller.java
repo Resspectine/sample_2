@@ -2,6 +2,7 @@ package sample;
 
 import chat.Chat;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
@@ -16,12 +17,13 @@ import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
 
 public class Controller {
+    @FXML
     public Button button;
+    @FXML
     public Button buttonBack;
-    public TextArea chat;
-    public TextField chatText;
-    public String message = "";
+    @FXML
     public Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    @FXML
     public Chat chatBox;
 
     public void guesse(ActionEvent actionEvent) throws Exception {
@@ -37,24 +39,6 @@ public class Controller {
     public void back(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
         buttonBack.getScene().setRoot(root);
-    }
-
-    public void sendTextInChat(ActionEvent actionEvent) {
-        if (!chatText.getText().equals("")) {
-            message += chatText.getText() + "\n";
-            chat.setText(message);
-            chatText.setText("");
-        }
-    }
-
-    public void handleEnterPressed(KeyEvent keyEvent) {
-        if (keyEvent.getCode() == KeyCode.ENTER) {
-            if (!chatText.getText().equals("")) {
-                message += chatText.getText() + "\n";
-                chat.setText(message);
-                chatText.setText("");
-            }
-        }
     }
 
     public void openDialogPane(ActionEvent actionEvent) {
