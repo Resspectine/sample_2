@@ -5,10 +5,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TextArea id="chatBox" fx:id="chat" editable="false" layoutX="31.0" layoutY="21.0" prefHeight="316.0" prefWidth="287.0" wrapText="true" />
-      <TextField id="chatLine" fx:id="chatField" layoutX="31.0" layoutY="361.0" prefHeight="25.0" prefWidth="218.0"  onKeyPressed="#handleEnterPressed" />
-      <Button id="sendButton" fx:id="sendText" layoutX="254.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="25.0" prefWidth="64.0" text="Button"  onKeyPressed="#handleEnterPressed" />
-   </children>
+<fx:root prefHeight="321.0" prefWidth="248.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.60"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextArea id="chatBox" fx:id="chat" editable="false" prefHeight="316.0" prefWidth="287.0"
+                  promptText="Здесь будут выводиться сообщения" wrapText="true"/>
+        <TextField id="chatLine" fx:id="chatField" layoutY="316.0" onKeyPressed="#handleEnterPressed" prefHeight="25.0"
+                   prefWidth="207.0" promptText="Введите сообщение"/>
+        <Button id="sendButton" fx:id="sendText" layoutX="207.0" layoutY="316.0" mnemonicParsing="false"
+                onAction="#sendMessage" onKeyPressed="#handleEnterPressed" prefHeight="25.0" prefWidth="80.0"
+                text="Отправить"/>
+    </children>
 </fx:root>
