@@ -7,10 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
+import player.PlayerGuesser;
+import player.PlayerRiddler;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
@@ -25,6 +23,10 @@ public class Controller {
     public Alert alert = new Alert(Alert.AlertType.INFORMATION);
     @FXML
     public Chat chatBox;
+    @FXML
+    public PlayerGuesser guesseBox;
+    @FXML
+    public PlayerRiddler riddleBox;
 
     public void guesse(ActionEvent actionEvent) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("riddler.fxml"));
