@@ -9,6 +9,6 @@ public class Message {
 
     public Message(String message) {
         this.message = message;
-        message = message.concat("\n");
+        //message = message.concat("\n");
     }
 }

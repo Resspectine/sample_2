@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<fx:root prefHeight="75.0" prefWidth="167.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="checkContact" onAction="#checkRiddlerWord" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Есть контакт" />
+      <Button fx:id="sendAssumption" onAction="#sendRiddlerWord" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="Сделать предположение" />
+      <TextField fx:id="textAssumption" onKeyPressed="#handleEnterPressed" layoutY="25.0" prefHeight="25.0" prefWidth="167.0" promptText="Предположение" />
+   </children>
+</fx:root>
